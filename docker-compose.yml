@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    # environment:
+    #   MYSQL_ROOT_PASSWORD: myrootpassword
+    #   MYSQL_DATABASE: mydatabase
+    #   MYSQL_USER: myuser
+    #   MYSQL_PASSWORD: mypassword
+    ports:
+      - "3306:3306"
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
