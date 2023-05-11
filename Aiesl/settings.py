@@ -74,14 +74,25 @@ WSGI_APPLICATION = 'Aiesl.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'aidb',
+#        'USER': 'aidb',
+#        'PASSWORD': 'aidb',
+#        'HOST': 'db',
+#        'PORT': '3306',
+#    }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'AIDB',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'my-app-db',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'db',
+        'PORT': 3306,
     }
 }
 
